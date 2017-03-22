@@ -1,0 +1,11 @@
+[Unit]
+Description=Bluetooth Init Script for D820C
+After=bluetooth.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/btsetup-d820c.sh
+
+[Install]
+WantedBy=multi-user.target
